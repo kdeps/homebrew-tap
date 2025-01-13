@@ -12,7 +12,7 @@ class Kdeps < Formula
   on_macos do
     on_intel do
       url "https://github.com/kdeps/kdeps/releases/download/v0.1.0/kdeps_Darwin_x86_64.tar.gz"
-      sha256 "a45c42f0d69101232d6bc9acabfd2e2774bd3370861ff57ccdfb0d4926c1bc73"
+      sha256 "3cb09c9ea67fcfacdf0ed9ca033e3634e8b4dc4a770c150b7c949aae316fedab"
 
       def install
         bin.install "kdeps"
@@ -20,7 +20,7 @@ class Kdeps < Formula
     end
     on_arm do
       url "https://github.com/kdeps/kdeps/releases/download/v0.1.0/kdeps_Darwin_arm64.tar.gz"
-      sha256 "c4916248d3c3a7b0602db356b2753da9b0ebeaae3b9939ba6e724789c58a10d6"
+      sha256 "1eab9c5f7548858ba0a89690c2d0512127e85b7abaacd6c6f4eb651d7b8f04bd"
 
       def install
         bin.install "kdeps"
@@ -32,7 +32,7 @@ class Kdeps < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kdeps/kdeps/releases/download/v0.1.0/kdeps_Linux_x86_64.tar.gz"
-        sha256 "dd56de6706a4035e9b126a0db7152da9f541a2d985bae74c98017e1621607dd1"
+        sha256 "1b40bfb143fdaa0a5bdec2de0df2db295de08bd31f2fb5295791e711d42626b8"
 
         def install
           bin.install "kdeps"
@@ -42,7 +42,7 @@ class Kdeps < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kdeps/kdeps/releases/download/v0.1.0/kdeps_Linux_arm64.tar.gz"
-        sha256 "c46bba13ee324c05d04cdcadfbbdd61ba36486e8e1589fa80ddd7f0edf2e8617"
+        sha256 "60cac10943275c22275e7101a3a3b53c4b66072745e93f221682b2270532f80e"
 
         def install
           bin.install "kdeps"
