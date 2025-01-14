@@ -5,22 +5,22 @@
 class Kdeps < Formula
   desc "Kdeps is a framework for creating dockerized AI Agent APIs"
   homepage "https://kdeps.com"
-  version "0.1.4"
+  version "0.1.5"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/kdeps/kdeps/releases/download/v0.1.4/kdeps_Darwin_x86_64.tar.gz"
-      sha256 "052d63906478c4bee861eab8ae8f428789966270c058496258d4d1dcc583a6fb"
+      url "https://github.com/kdeps/kdeps/releases/download/v0.1.5/kdeps_Darwin_x86_64.tar.gz"
+      sha256 "e0a60a122b6e5954e1a8693b40e6a6c7e15f70a15e9ce73beaab65832138f667"
 
       def install
         bin.install "kdeps"
       end
     end
     on_arm do
-      url "https://github.com/kdeps/kdeps/releases/download/v0.1.4/kdeps_Darwin_arm64.tar.gz"
-      sha256 "3d6307e29ca0899b9ca80a90e37d92061b5fa0914ca98785ce7f968b27275e99"
+      url "https://github.com/kdeps/kdeps/releases/download/v0.1.5/kdeps_Darwin_arm64.tar.gz"
+      sha256 "0522ed02c95dee72e7ac60b3aecfd0047612757ed83966407b50b0a683590d22"
 
       def install
         bin.install "kdeps"
@@ -31,8 +31,8 @@ class Kdeps < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kdeps/kdeps/releases/download/v0.1.4/kdeps_Linux_x86_64.tar.gz"
-        sha256 "2795b2eb0f54e23b52e9187c35758bae7bf12324ce7558728159a238ba6741df"
+        url "https://github.com/kdeps/kdeps/releases/download/v0.1.5/kdeps_Linux_x86_64.tar.gz"
+        sha256 "f26173b690781d1a1f66875a232d5b1e387d20f00d6c62edc4eafe6c0dba6f6a"
 
         def install
           bin.install "kdeps"
@@ -41,8 +41,8 @@ class Kdeps < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kdeps/kdeps/releases/download/v0.1.4/kdeps_Linux_arm64.tar.gz"
-        sha256 "dda10be083fe67d0b199a97c7cd64401e6135eb9251df1b74549822efa22a3e8"
+        url "https://github.com/kdeps/kdeps/releases/download/v0.1.5/kdeps_Linux_arm64.tar.gz"
+        sha256 "ad5d00fb9fa33cd332e54e5f4d8dbcd5a65286b4f078ddf5338d78f2f086aa6a"
 
         def install
           bin.install "kdeps"
