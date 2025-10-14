@@ -10,17 +10,17 @@ class Kdeps < Formula
   depends_on "git"
 
   on_macos do
-    on_intel do
+    if Hardware::CPU.intel?
       url "https://github.com/kdeps/kdeps/releases/download/v0.6.8/kdeps_Darwin_x86_64.tar.gz"
-      sha256 "e7bc780c12eb75136a4aa1a004dc904c95ee78a9fd2e1a112b5bc30a5f16edff"
+      sha256 "d2dd3d17f42bc8e499b90f1b4207d87ad5dcac314615ccaac606f829afe9f729"
 
       def install
         bin.install "kdeps"
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       url "https://github.com/kdeps/kdeps/releases/download/v0.6.8/kdeps_Darwin_arm64.tar.gz"
-      sha256 "d6b4ca9f273af94bd0936ba7335df0179c1a8165ca5d4256785a62b16fd5ca15"
+      sha256 "c4bbb987599c5ec34177c15fca1f98b6ade6dda439b9536a250f728530fed612"
 
       def install
         bin.install "kdeps"
@@ -29,24 +29,18 @@ class Kdeps < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/kdeps/kdeps/releases/download/v0.6.8/kdeps_Linux_x86_64.tar.gz"
-        sha256 "974f82b366f9948175f06b5182d8d1152c1f037f54cc59b5219a753b1b06f313"
-
-        def install
-          bin.install "kdeps"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kdeps/kdeps/releases/download/v0.6.8/kdeps_Linux_x86_64.tar.gz"
+      sha256 "7862b7dcf76aacd941bcb7e5c1da3dc4d69e370dee7a25977f076222564a8338"
+      def install
+        bin.install "kdeps"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/kdeps/kdeps/releases/download/v0.6.8/kdeps_Linux_arm64.tar.gz"
-        sha256 "3a3412ebfa0741c279ebf23f925f29ba45368e2984626d4a762d34621743d884"
-
-        def install
-          bin.install "kdeps"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kdeps/kdeps/releases/download/v0.6.8/kdeps_Linux_arm64.tar.gz"
+      sha256 "ce4fb5b2e66e0bb6f1e151b728b19f5bed88e6d9991be1ea0dcf16b88949e541"
+      def install
+        bin.install "kdeps"
       end
     end
   end
