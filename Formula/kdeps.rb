@@ -5,22 +5,22 @@
 class Kdeps < Formula
   desc "Kdeps is a framework for creating dockerized AI Agent APIs"
   homepage "https://kdeps.com"
-  version "1.9.45"
+  version "2.0.0-nightly202602170717"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kdeps/kdeps/releases/download/v1.9.45/kdeps_Darwin_x86_64.tar.gz"
-      sha256 "aa3d47c5b09e5d1969b0692d6b37d360f395ced85df7a0033388ed511725fafb"
+      url "https://github.com/kdeps/kdeps/releases/download/v2.0.0-nightly202602170717/kdeps_Darwin_x86_64.tar.gz"
+      sha256 "5e08bd221f0b40b9f90fd662f7fa5b7ad7808791a0b08172dc1203e3b9bbe310"
 
       def install
         bin.install "kdeps"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kdeps/kdeps/releases/download/v1.9.45/kdeps_Darwin_arm64.tar.gz"
-      sha256 "b5f61634836aa4298753ad617671460be950db4086de1addb0b0e3541a9a3266"
+      url "https://github.com/kdeps/kdeps/releases/download/v2.0.0-nightly202602170717/kdeps_Darwin_arm64.tar.gz"
+      sha256 "183795018fc06a8f46906e45d6af7e6f9de2c4a30158c234d0f8cc1af09ef0aa"
 
       def install
         bin.install "kdeps"
@@ -30,15 +30,15 @@ class Kdeps < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdeps/kdeps/releases/download/v1.9.45/kdeps_Linux_x86_64.tar.gz"
-      sha256 "25e0c8da133b5fcf71afc8f6d4b603eacc1ffe36873b3c8171b92e56c42e4331"
+      url "https://github.com/kdeps/kdeps/releases/download/v2.0.0-nightly202602170717/kdeps_Linux_x86_64.tar.gz"
+      sha256 "388f32fb98f1054ee3be65a541f4e50aa76d37573cd45aaae1c06c5b6ffc905f"
       def install
         bin.install "kdeps"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdeps/kdeps/releases/download/v1.9.45/kdeps_Linux_arm64.tar.gz"
-      sha256 "6602ae86a59d2064b3472807c53563a67e5b41eefc0bf5c9d5af58c4790b9b7b"
+      url "https://github.com/kdeps/kdeps/releases/download/v2.0.0-nightly202602170717/kdeps_Linux_arm64.tar.gz"
+      sha256 "75bb3ca3f94df29c05699d505e4a9bc3814852073272ca31ac370b68922e991c"
       def install
         bin.install "kdeps"
       end
