@@ -5,21 +5,21 @@
 class Turo < Formula
   desc "Point more. Token less. Reduce text to its content words to cut input tokens."
   homepage "https://github.com/kdeps/turo"
-  version "0.1.3"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kdeps/turo/releases/download/v0.1.3/turo_Darwin_x86_64.tar.gz"
-      sha256 "e9f05a274bafe7ce14257e9a4dfb9a3bf112dae87e2462899ff4f95fa96e13ac"
+      url "https://github.com/kdeps/turo/releases/download/v0.2.0/turo_Darwin_x86_64.tar.gz"
+      sha256 "d4577b3304d872509036d89def18cdcafefed3cbbe67016d4d5a9629ab5eeb4f"
 
       define_method(:install) do
         bin.install "turo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kdeps/turo/releases/download/v0.1.3/turo_Darwin_arm64.tar.gz"
-      sha256 "567cc2513c8de7c2cd4bc804f206d23c1a40beba7f8bd3db9d0a26ac03f11242"
+      url "https://github.com/kdeps/turo/releases/download/v0.2.0/turo_Darwin_arm64.tar.gz"
+      sha256 "2508fae99e3340bf8a9d317c1b3ffb6700f4258368ca9ff6ace2400371386636"
 
       define_method(:install) do
         bin.install "turo"
@@ -29,15 +29,15 @@ class Turo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdeps/turo/releases/download/v0.1.3/turo_Linux_x86_64.tar.gz"
-      sha256 "bd58be7863c5e2cef96e90a5641b989b15bd461e6da523870be89887181218d6"
+      url "https://github.com/kdeps/turo/releases/download/v0.2.0/turo_Linux_x86_64.tar.gz"
+      sha256 "0dbe812d091252411b6b7c59dc1e569315b7d75a69ea4190837bcfd478a804cf"
       define_method(:install) do
         bin.install "turo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdeps/turo/releases/download/v0.1.3/turo_Linux_arm64.tar.gz"
-      sha256 "93d31327d9f6458ca2098f600d0ec6c58ddfd2e98ede4c3dc41f5fdd3010d71a"
+      url "https://github.com/kdeps/turo/releases/download/v0.2.0/turo_Linux_arm64.tar.gz"
+      sha256 "096b68074d197f4e0dc064568d22764a5d745e07320c5b97410cb77ff88d51f3"
       define_method(:install) do
         bin.install "turo"
       end
