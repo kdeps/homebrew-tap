@@ -5,22 +5,22 @@
 class Kdeps < Formula
   desc "Kdeps is a framework for creating dockerized AI Agent APIs"
   homepage "https://kdeps.com"
-  version "2.44.0"
+  version "2.45.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kdeps/kdeps/releases/download/v2.44.0/kdeps_Darwin_x86_64.tar.gz"
-      sha256 "5b181d9a4bbaaaf90697ddebfa142abf10e0e9fe3b27ad97b13cea884a1376d6"
+      url "https://github.com/kdeps/kdeps/releases/download/v2.45.0/kdeps_Darwin_x86_64.tar.gz"
+      sha256 "f9972b80aca2996fe3d821fde0de750fee24be2b7f5216ccbaa6225bd806514c"
 
       define_method(:install) do
         bin.install "kdeps"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kdeps/kdeps/releases/download/v2.44.0/kdeps_Darwin_arm64.tar.gz"
-      sha256 "a280fe86d433a2d82c9dc4355a53bdd2f44d74ff2e4d8b24790e0fe678739987"
+      url "https://github.com/kdeps/kdeps/releases/download/v2.45.0/kdeps_Darwin_arm64.tar.gz"
+      sha256 "858da5cbc45927d2c0086695426bf6c86bdb8cb73ca4894f7aa25cc67dbb49fa"
 
       define_method(:install) do
         bin.install "kdeps"
@@ -30,15 +30,15 @@ class Kdeps < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdeps/kdeps/releases/download/v2.44.0/kdeps_Linux_x86_64.tar.gz"
-      sha256 "69534eeac8f0c40a7b833134f77a32091ce16f1df9a1fb129d9425b55a11eb4a"
+      url "https://github.com/kdeps/kdeps/releases/download/v2.45.0/kdeps_Linux_x86_64.tar.gz"
+      sha256 "3dfe09a3f134457a5eee9b6fad71d43bff38c89e330c522c057e316450427763"
       define_method(:install) do
         bin.install "kdeps"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdeps/kdeps/releases/download/v2.44.0/kdeps_Linux_arm64.tar.gz"
-      sha256 "e33b7107b446008609e69fc2e3ec5a8a635e6d026afc9cc366099fa6c20cdc3d"
+      url "https://github.com/kdeps/kdeps/releases/download/v2.45.0/kdeps_Linux_arm64.tar.gz"
+      sha256 "ce4d3ad9ba2a3d0352f19d70216f6818187110320b25643637dac5aa8ae86277"
       define_method(:install) do
         bin.install "kdeps"
       end
