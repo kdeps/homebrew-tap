@@ -20,13 +20,13 @@ cask "kdeps-desktop" do
     skip "Auto-generated on release."
   end
 
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "kdeps.app"
 
   # The app is ad-hoc signed, not notarized: clear the quarantine flag so it opens.
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "kdeps.app"], base: :appdir, must_succeed: false
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/kdeps.app"], must_succeed: false
   end
 
   zap trash: "~/.kdeps"
