@@ -5,22 +5,22 @@
 class Kdeps < Formula
   desc "Kdeps is a framework for creating dockerized AI Agent APIs"
   homepage "https://kdeps.com"
-  version "3.1.1"
+  version "3.1.1-nightly202611120952"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kdeps/kdeps/releases/download/v3.1.1/kdeps_Darwin_x86_64.tar.gz"
-      sha256 "32354e4344ab00d41611679604bc616b150502f2aabb97ebdf70b46df3d58809"
+      url "https://github.com/kdeps/kdeps/releases/download/v3.1.1-nightly202611120952/kdeps_Darwin_x86_64.tar.gz"
+      sha256 "7be3fc030e5a76a804dfbbb0e2cd89619b6fc0f31e128ee894c1980f136848a8"
 
       define_method(:install) do
         bin.install "kdeps"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kdeps/kdeps/releases/download/v3.1.1/kdeps_Darwin_arm64.tar.gz"
-      sha256 "430d51f686e4570c9ad92c8109ba8139e13d78306571ec4b2ce8cc0fb081959d"
+      url "https://github.com/kdeps/kdeps/releases/download/v3.1.1-nightly202611120952/kdeps_Darwin_arm64.tar.gz"
+      sha256 "b92cb4b116197f00fd8be294e5d7927d4e7a8d06916e3bc0067ccaa6e31bb733"
 
       define_method(:install) do
         bin.install "kdeps"
@@ -30,15 +30,15 @@ class Kdeps < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdeps/kdeps/releases/download/v3.1.1/kdeps_Linux_x86_64.tar.gz"
-      sha256 "b24ccb57856e6a080a0f263097778cc994b4d047a65ea0c7dfaa16ca454fd0c3"
+      url "https://github.com/kdeps/kdeps/releases/download/v3.1.1-nightly202611120952/kdeps_Linux_x86_64.tar.gz"
+      sha256 "82b537d8f4d189bd41f2e8dd8914e638372b7c38d5618c6121fa3b441daa6477"
       define_method(:install) do
         bin.install "kdeps"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kdeps/kdeps/releases/download/v3.1.1/kdeps_Linux_arm64.tar.gz"
-      sha256 "28c9264b6903081a9718ded189be4d9071c2251c2d15892dd350e240e5575734"
+      url "https://github.com/kdeps/kdeps/releases/download/v3.1.1-nightly202611120952/kdeps_Linux_arm64.tar.gz"
+      sha256 "ad32bd25c11540495df578e752c524da72850fb2f741d56f62ffe27c11c2df20"
       define_method(:install) do
         bin.install "kdeps"
       end
