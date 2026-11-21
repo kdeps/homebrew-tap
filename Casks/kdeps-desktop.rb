@@ -1,13 +1,13 @@
 cask "kdeps-desktop" do
-  version "3.2.0"
+  version "3.2.1"
 
   on_arm do
-    sha256 "6398d8d2c56723e5c26277cd7a6ddc454f81003184cd06c0e690a25ec8ef3540"
+    sha256 "5768c7e34f0a3938d4673d9bf73266ea35f9d3521d69e3f62cffffe1f3c62667"
 
     url "https://github.com/kdeps/kdeps/releases/download/v#{version}/kdeps-desktop_#{version}_darwin_arm64.dmg"
   end
   on_intel do
-    sha256 "691f234df4dc815dcd89d8512fa236341c0832d290c698175ddfd56668740031"
+    sha256 "af839696f7fa93cd8f378d197dfd7262e80646ce0100957f99cabb7338d7e292"
 
     url "https://github.com/kdeps/kdeps/releases/download/v#{version}/kdeps-desktop_#{version}_darwin_amd64.dmg"
   end
